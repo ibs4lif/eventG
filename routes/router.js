@@ -13,6 +13,9 @@ router.use(cors());
 //------------------------------------------------------------------
 //EQUIPEMENT
 //------------------------------------------------------------------
+router.get('/', function (req, res) {
+    res.send('Test');
+});
 router.get('/equipement', function (req, res) {
     db.equipement.find(function (err, docs) {
         console.log(docs);
